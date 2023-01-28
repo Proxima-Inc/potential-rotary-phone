@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Proxi AI</title>
+  <style type="text/css" media="all">
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+body{
+  background-color:#000 ;
+  color: #fff;
+  margin:;
+  font-family:"poppins", sans-serif, serif,arial;
+}
+.top-container{
+  margin: auto;
+  min-height: 40px;
+  width: 100%;
+  background-color: #353535;
+}
+.inner-top{
+  max-width: 60px;
+  margin: auto;
+}
+.top-icon{
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 10px;
+}
+.bottom-nav{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  min-height: 150px;
+  background-color: #353636;
+  border-radius: 15px;
+}
+textarea{
+  background-color: transparent;
+  width: 300px;
+  height: 40px;
+  border: 2px solid #fff;
+  outline: none;
+  position: relative;
+  top: 50px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 15px;
+  padding: 10px;
+  display: flex;
+  padding-right: 35px;
+}
+.inner-bottom{
+  max-width: 300px;
+  margin: auto;
+}
+.bottom-text{
+  font-size: 13px;
+  color: #888;
+  margin-top: 70px;
+}
+.send-image{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 55px;
+  right: 20px;
+}
+.mic{
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #777;
+  padding: 10px;
+  bottom:110px;
+}
+.mic-container{
+  max-width: 70px;
+  margin: auto;
+}
+.user-output{
+  font-size: 1em;
+  color: #dedede;
+  margin: 35px 15px 5px 15px;
+  padding: 7px;
+}
+.user-text{
+  line-height: 35px;
+}
+.inner-bot-output{
+  padding: 5px 15px 5px 15px;
+}
+.bot-output{
+  font-size: 1em;
+  padding: 7px;
+  width: 100%;
+  background-color: #353636;
+  line-height: 35px;
+}
+.real-user-output{
+  font-size: 1em;
+  color: #dedede;
+  margin: 5px 15px 5px 15px;
+  padding: 7px;
+}
+.buttom-space{
+  height: 170px;
+}
+  </style>
+</head>
+<body>
+    <div class="top-container">
+  <nav class="top-nav">
+    <div class="inner-top"><img class="top-icon" src="img/proxi.png" alt="" /></div>
+  </nav>
+    </div>
+  
+  <nav class="bottom-nav">
+    <div class="inner-bottom">
+      <div class="mic-container">
+      <img class="mic" src="img/microphone.png" alt="" />
+      </div>
+    <textarea class="chat-text" type="text" name="" id="user-input" value=""
+    /></textarea>
+    <button class="send-button" id="send-button">
+    <a class="send-plane" href="#">
+      <img
+    class="send-image" src="img/send-image.png" alt="" /></a></button>
+    <p class="bottom-text">Powered by Gpt3. Our goal is to make AI system more
+    natural and safe to interact with, your feedback will help us improve</p>
+    </div>
+  </nav>
+  <div class="user-output">
+    <p class="user-text"></p>
+  </div>
+  <div class="bot-output">
+    <div class="inner-bot-output">
+      <p class="bot-text"></p>
+    </div>
+  </div>
+  <div class="buttom-space"></div>
+  
+<script type="text/javascript" charset="utf-8">
+const sendButton = document.getElementById("send-button");
+const userInput = document.getElementById("user-input");
+const userOutput = document.getElementById("user-output");
+
+sendButton.addEventListener("click", function() {
+  const inputText = userInput.value;
+  userOutput.innerHTML += `<div>${inputText}</div>`;
+  userInput.value = "";
+});
+
+</script>
+  </body>
+</html>
