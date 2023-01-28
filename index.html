@@ -14,12 +14,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  user-select: none;
 }
 body{
   background-color:#000 ;
   color: #fff;
-  margin:;
   font-family:"poppins", sans-serif, serif,arial;
 }
 .top-container{
@@ -42,7 +40,7 @@ body{
   position: fixed;
   bottom: 0;
   width: 100%;
-  min-height: 150px;
+  min-height: 90px;
   background-color: #353636;
   border-radius: 15px;
 }
@@ -53,7 +51,7 @@ textarea{
   border: 2px solid #fff;
   outline: none;
   position: relative;
-  top: 50px;
+  top: 60px;
   border-radius: 5px;
   color: #fff;
   font-size: 15px;
@@ -74,7 +72,7 @@ textarea{
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 55px;
+  top:65px;
   right: 20px;
 }
 .mic{
@@ -134,16 +132,15 @@ textarea{
       </div>
     <textarea class="chat-text" type="text" name="" id="user-input" value=""
     /></textarea>
-    <button class="send-button" id="send-button">
-    <a class="send-plane" href="#">
+    <a class="send-plane" id="send-button" href="#">
       <img
-    class="send-image" src="img/send-image.png" alt="" /></a></button>
+    class="send-image" src="img/send-image.png" alt="" /></a>
     <p class="bottom-text">Powered by Gpt3. Our goal is to make AI system more
     natural and safe to interact with, your feedback will help us improve</p>
     </div>
   </nav>
   <div class="user-output">
-    <p class="user-text"></p>
+    <p id="user-output"></p>
   </div>
   <div class="bot-output">
     <div class="inner-bot-output">
